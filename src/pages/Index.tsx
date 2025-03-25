@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -268,7 +267,7 @@ const Index = () => {
         </div>
         
         <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} LifeSupport. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} TrueBLS. All rights reserved.</p>
         </div>
       </footer>
     </div>
@@ -276,3 +275,4 @@ const Index = () => {
 };
 
 export default Index;
+
