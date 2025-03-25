@@ -45,9 +45,9 @@ const Navbar = () => {
         {/* Logo */}
         <Link 
           to="/" 
-          className="font-bold text-xl tracking-tight text-life-blue-700 hover:text-life-blue-600 transition-colors"
+          className="font-bold text-xl tracking-tight text-red-600 hover:text-red-500 transition-colors"
         >
-          LifeSupport
+          trueBLS
         </Link>
 
         {/* Desktop Navigation */}
@@ -59,18 +59,18 @@ const Navbar = () => {
               className={cn(
                 'text-sm font-medium transition-colors relative px-1 py-2',
                 location.pathname === item.path
-                  ? 'text-life-blue-700'
+                  ? 'text-red-600'
                   : 'text-foreground/80 hover:text-foreground'
               )}
             >
               {item.name}
               {location.pathname === item.path && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-life-blue-500 rounded-full" />
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-red-500 rounded-full" />
               )}
             </Link>
           ))}
           <Button 
-            className="ml-2 bg-life-blue-600 hover:bg-life-blue-700 text-white shadow-sm transition-all duration-200"
+            className="ml-2 bg-red-600 hover:bg-red-700 text-white shadow-sm transition-all duration-200"
             size="sm"
           >
             Enroll Now
@@ -102,7 +102,7 @@ const Navbar = () => {
                 className={cn(
                   'block py-2 text-base font-medium transition-colors',
                   location.pathname === item.path
-                    ? 'text-life-blue-700'
+                    ? 'text-red-600'
                     : 'text-foreground/80 hover:text-foreground'
                 )}
               >
@@ -110,7 +110,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Button 
-              className="w-full mt-3 bg-life-blue-600 hover:bg-life-blue-700 text-white shadow-sm transition-all duration-200"
+              className="w-full mt-3 bg-red-600 hover:bg-red-700 text-white shadow-sm transition-all duration-200"
               size="default"
             >
               Enroll Now

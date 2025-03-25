@@ -32,7 +32,7 @@ const CourseCard = ({
   }[level];
 
   return (
-    <Card className="overflow-hidden h-full transition-all duration-300 hover:shadow-md border-transparent hover:border-life-blue-200 glass-card group">
+    <Card className="overflow-hidden h-full transition-all duration-300 hover:shadow-md border-transparent hover:border-red-200 glass-card group">
       <CardHeader className="p-0 relative aspect-[16/9] overflow-hidden">
         <img 
           src={image} 
@@ -57,7 +57,7 @@ const CourseCard = ({
         </div>
       </CardContent>
       <CardFooter className="px-5 pb-5 pt-0">
-        <Button asChild className="w-full bg-life-blue-600 hover:bg-life-blue-700">
+        <Button asChild className="w-full bg-red-600 hover:bg-red-700">
           <Link to={`/course`}>View Course</Link>
         </Button>
       </CardFooter>
