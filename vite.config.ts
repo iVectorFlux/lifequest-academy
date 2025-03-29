@@ -24,5 +24,13 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/"
+  base: "/",
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'es2020'
+    }
+  },
+  esbuild: {
+    target: 'es2020'
+  }
 }));
