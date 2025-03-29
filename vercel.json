@@ -13,6 +13,41 @@
       "headers": { "content-type": "application/javascript" },
       "dest": "/$1.mjs"
     },
+    { 
+      "src": "/(.*)\\.css$",
+      "headers": { "content-type": "text/css" },
+      "dest": "/$1.css"
+    },
+    { 
+      "src": "/(.*)\\.svg$",
+      "headers": { "content-type": "image/svg+xml" },
+      "dest": "/$1.svg"
+    },
+    { 
+      "src": "/(.*)\\.png$",
+      "headers": { "content-type": "image/png" },
+      "dest": "/$1.png"
+    },
+    { 
+      "src": "/(.*)\\.jpg$",
+      "headers": { "content-type": "image/jpeg" },
+      "dest": "/$1.jpg"
+    },
+    { 
+      "src": "/(.*)\\.jpeg$",
+      "headers": { "content-type": "image/jpeg" },
+      "dest": "/$1.jpeg"
+    },
+    { 
+      "src": "/(.*)\\.gif$",
+      "headers": { "content-type": "image/gif" },
+      "dest": "/$1.gif"
+    },
+    { 
+      "src": "/(.*)\\.woff2?$",
+      "headers": { "content-type": "font/woff" },
+      "dest": "/$1.woff2"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"

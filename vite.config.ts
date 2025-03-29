@@ -12,7 +12,15 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: "dist",
-    sourcemap: true
+    sourcemap: true,
+    assetsInlineLimit: 0, // Don't inline any assets
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+        }
+      }
+    }
   },
   plugins: [
     react(),
