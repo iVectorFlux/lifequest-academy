@@ -3,7 +3,16 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone, Mail, MessageSquare } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import ContactForm from './ContactForm';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,7 +38,6 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Course', path: '/course' },
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
   ];
 
   return (
@@ -69,11 +77,34 @@ const Navbar = () => {
               )}
             </Link>
           ))}
+          
+          {/* Contact Dialog */}
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button 
+                variant="ghost" 
+                className="text-sm font-medium transition-colors relative px-1 py-2 text-foreground/80 hover:text-foreground"
+              >
+                Contact
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[500px]">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold text-red-600">Contact Us</DialogTitle>
+                <DialogDescription>
+                  Fill out the form below and we'll get back to you as soon as possible.
+                </DialogDescription>
+              </DialogHeader>
+              <ContactForm />
+            </DialogContent>
+          </Dialog>
+          
           <Button 
             className="ml-2 bg-red-600 hover:bg-red-700 text-white shadow-sm transition-all duration-200"
             size="sm"
+            asChild
           >
-            Enroll Now
+            <Link to="/course">Enroll Now</Link>
           </Button>
         </div>
 
@@ -109,11 +140,34 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Mobile Contact Dialog */}
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button 
+                  variant="ghost" 
+                  className="w-full justify-start py-2 text-base font-medium text-foreground/80 hover:text-foreground"
+                >
+                  Contact
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[500px]">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-bold text-red-600">Contact Us</DialogTitle>
+                  <DialogDescription>
+                    Fill out the form below and we'll get back to you as soon as possible.
+                  </DialogDescription>
+                </DialogHeader>
+                <ContactForm />
+              </DialogContent>
+            </Dialog>
+            
             <Button 
               className="w-full mt-3 bg-red-600 hover:bg-red-700 text-white shadow-sm transition-all duration-200"
               size="default"
+              asChild
             >
-              Enroll Now
+              <Link to="/course">Enroll Now</Link>
             </Button>
           </div>
         </div>
