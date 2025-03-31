@@ -88,11 +88,11 @@ const Navbar = () => {
                 Contact
               </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[500px]">
+            <DialogContent className="sm:max-w-[90%] md:max-w-[80%] lg:max-w-[800px] max-h-[90vh]">
               <DialogHeader>
                 <DialogTitle className="text-2xl font-bold text-red-600">Contact Us</DialogTitle>
                 <DialogDescription>
-                  Fill out the form below and we'll get back to you as soon as possible.
+                  Please fill out the form below and we'll get back to you as soon as possible.
                 </DialogDescription>
               </DialogHeader>
               <ContactForm />
@@ -151,11 +151,11 @@ const Navbar = () => {
                   Contact
                 </Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[500px]">
+              <DialogContent className="sm:max-w-[90%] md:max-w-[80%] lg:max-w-[800px] max-h-[90vh]">
                 <DialogHeader>
                   <DialogTitle className="text-2xl font-bold text-red-600">Contact Us</DialogTitle>
                   <DialogDescription>
-                    Fill out the form below and we'll get back to you as soon as possible.
+                    Please fill out the form below and we'll get back to you as soon as possible.
                   </DialogDescription>
                 </DialogHeader>
                 <ContactForm />
