@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { Phone, Mail } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
