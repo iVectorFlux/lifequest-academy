@@ -11,7 +11,6 @@ const ContactForm = () => {
           className="airtable-embed w-full min-h-[85vh] border-none"
           src="https://airtable.com/appPqLyziBE8oetDP/shrbJn1qDBh0QZdYx"
           frameBorder="0"
-          onMouseWheel=""
           style={{ background: 'transparent' }}
         ></iframe>
       </div>
