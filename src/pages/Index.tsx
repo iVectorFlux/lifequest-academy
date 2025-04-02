@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Check, Heart, Award, Clock, HeartPulse, LifeBuoy, Building, School, GraduationCap, Briefcase, Phone, Mail } from 'lucide-react';
+import { Check, Heart, Award, Clock, HeartPulse, LifeBuoy, Building, School, GraduationCap, Briefcase, Phone, Mail, User } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import CourseCard from '@/components/CourseCard';
+import { cn } from '@/lib/utils';
 
 const Index = () => {
   return (
@@ -155,8 +156,15 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
+              {
+                icon: <User className="h-16 w-16 text-red-600" strokeWidth={1.5} />,
+                title: "Individual / Yourself",
+                description: "Learn life-saving skills at your own pace with our free self-training program for individuals.",
+                buttonText: "Get Started Free",
+                highlight: true
+              },
               {
                 icon: <School className="h-16 w-16 text-red-600" strokeWidth={1.5} />,
                 title: "Schools & Educational Facilities",
@@ -176,7 +184,19 @@ const Index = () => {
                 buttonText: "Corporate Programs"
               }
             ].map((option, index) => (
-              <Card key={index} className="bg-white border-none shadow-md hover:shadow-lg transition-all animate-slide-up text-center p-6" style={{ animationDelay: `${index * 100}ms` }}>
+              <Card 
+                key={index} 
+                className={cn(
+                  "bg-white border-none shadow-md hover:shadow-lg transition-all animate-slide-up text-center p-6",
+                  option.highlight && "border-2 border-red-500 relative"
+                )}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                {option.highlight && (
+                  <div className="absolute -top-3 right-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    FREE
+                  </div>
+                )}
                 <CardContent className="flex flex-col items-center p-6">
                   <div className="mb-6">
                     {option.icon}
@@ -184,7 +204,10 @@ const Index = () => {
                   <h3 className="text-xl font-bold mb-3">{option.title}</h3>
                   <p className="text-gray-600 mb-6">{option.description}</p>
                   <Button 
-                    className="bg-red-600 hover:bg-red-700 text-white"
+                    className={cn(
+                      "text-white",
+                      option.highlight ? "bg-green-600 hover:bg-green-700" : "bg-red-600 hover:bg-red-700"
+                    )}
                     asChild
                   >
                     <Link to="/course">{option.buttonText}</Link>
