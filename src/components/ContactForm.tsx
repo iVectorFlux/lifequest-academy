@@ -17,14 +17,14 @@ const ContactForm = () => {
         </div>
       </div>
       
-      {/* Embed Airtable form */}
+      {/* Embed Google Form */}
       <div className="w-full">
         <iframe
-          className="airtable-embed w-full min-h-[85vh] border-none"
-          src="https://airtable.com/appPqLyziBE8oetDP/shrbJn1qDBh0QZdYx"
+          className="w-full min-h-[85vh] border-none"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfSSgvDoBDo0edzEzhU6IhH-5TPkNFNvACSVrwI5XpjhtVRAg/viewform?embedded=true"
           frameBorder="0"
           style={{ background: 'transparent' }}
-        ></iframe>
+        >Loading…</iframe>
       </div>
       
       <div className="text-sm text-gray-500 flex flex-col sm:flex-row sm:items-center gap-4 pt-4">
