@@ -12,10 +12,9 @@ const About = () => {
         
         <div className="space-y-6 bg-white p-6 sm:p-8 rounded-lg shadow-sm">
           <p className="text-lg">
-            TrueBLS, a pioneering brand under iVectorFlux Technology Pvt Ltd, is on a mission to 
-            revolutionize CPR, first aid, and life support training in India. We aim to empower every 
-            individual with the knowledge and skills to respond effectively during emergencies, ultimately 
-            saving lives and making communities safer.
+            TrueBLS is on a mission to revolutionize CPR, first aid, and life support training in India. 
+            We aim to empower every individual with the knowledge and skills to respond effectively during 
+            emergencies, ultimately saving lives and making communities safer.
           </p>
           
           <p className="text-lg">
